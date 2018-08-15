@@ -22,9 +22,9 @@ The StatsD format is very simple. In it's simplest form it looks something like 
 
 Start by [creating a new parser]({{< ref "parsers/creating-a-parser" >}}) with the following regex
 
-```regexp
+{{< parser type="regex" datetimeformat="false" >}}
 (?<metricname>\w+?):(?<metricvalue>[-+]?[\d\.]+?)\|(?<metrictype>\w+?)(\|@(?<metricsampling>[\d\.]+?))?
-```
+{{< /parser >}}
 
 And no _Parse timestamp_ and _Parse key values_. Finally give it a name, i.e. "statsd".
 

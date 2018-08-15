@@ -1,0 +1,27 @@
+<div>
+    <div>Parser type: {{ .Get "type" }}</div>
+{{ if .Get "type" | eq "regex" }}
+    {{ if .Get "datetimeformat" | eq "false" }}
+    <div>Parse timestamps: Off</div>
+    {{ else }}
+    <div>Parse timestamp: On</div>
+    <div>Timestamp format: <code>{{ .Get "datetimeformat" }}</code></div>
+    {{ with .Get "timezone" }}<div>Timezone: <code>{{ . }}</code></div> {{end}}
+    {{ end }}
+    <pre><code>{{ printf "%s" .Inner }}</code></pre>
+{{ else if .Get "type" | eq "json" }}
+    {{ if .Get "datetimeformat" | eq "false" }}
+    <div>Parse timestamps: Off</div>
+    {{ else }}
+    <div>Parse timestamp: On</div>
+    <div>Timestamp format: <code>{{ .Get "datetimeformat" }}</code></div>
+    <div>Timestamp field name: <code>{{ .Get "timestampfield" }}</code></div>
+    {{ end }}
+    <div>Parse nested JSON: {{ if .Get "parsenestedjson" | eq "true" }}On{{ else }}Off{{ end }}</div>
+{{ else if .Get "type" | eq "humio" }}
+    <!--TODO: finish the Humio parser-->
+    <pre><code class="language-humio">{{ printf "%s" .Inner }} </code></pre>
+{{ else }}
+    <pre><code>{{ .Inner }}</code></pre>
+{{ end }}
+</div>
