@@ -62,23 +62,22 @@ The following JSON is an example policy configuration.
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Effect": "Allow",
-            "Action": [
-                "s3:ListBucket"
-            ],
-            "Resource": [
-                "arn:aws:s3:::BUCKET_NAME"
-            ]
-        },
-        {
+            "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
                 "s3:PutObject",
-                "s3:GetObject"
+                "s3:GetObject",
+                "s3:AbortMultipartUpload",
+                "s3:PutObjectAcl",
+                "s3:ListMultipartUploadParts"
             ],
-            "Resource": [
-                "arn:aws:s3:::BUCKET_NAME/*"
-            ]
+            "Resource": "arn:aws:s3:::*/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "s3:ListBucketMultipartUploads",
+            "Resource": "arn:aws:s3:::*"
         }
     ]
 }
