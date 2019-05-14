@@ -1,6 +1,6 @@
 ---
 title: Dashboards
-aliases: ["ref/dashboards"]
+aliases: ["/ref/dashboards"]
 ---
 
 Humio can display a collection of different widgets, each with their

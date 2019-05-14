@@ -1,6 +1,6 @@
 ---
 title: Tagging
-aliases: ["ref/tags", "ref/tagging", "concepts/tags"]
+aliases: ["/ref/tags", "/ref/tagging", "concepts/tags"]
 ---
 
 Tagging is an advanced topic and you should only consider using it if you need to

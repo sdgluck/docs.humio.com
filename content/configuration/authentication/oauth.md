@@ -3,7 +3,7 @@ title: Authenticating with OAuth 2.0
 menuTitle: OAuth 2.0
 category: ["Integration"]
 pageImage: /integrations/oauth.svg
-aliases: ["ref/oauth"]
+aliases: ["/ref/oauth"]
 ---
 
 Humio supports the OAuth 2.0 login flow for the following providers:
@@ -80,7 +80,6 @@ AUTO_CREATE_USER_ON_SUCCESSFUL_LOGIN=true  # default is false
 
 Read more about [Configuring Humio]({{< relref "configuration/_index.md" >}})
 
-
 ## BitBucket Sign-In {#bitbucket}
 
 Setup Instructions: https://confluence.atlassian.com/bitbucket/integrate-another-application-through-oauth-372605388.html
@@ -105,7 +104,7 @@ AUTHENTICATION_METHOD=oauth
 PUBLIC_URL=$YOUR_SERVERS_BASE_URL
 BITBUCKET_OAUTH_CLIENT_ID=$CLIENT_ID # The Key from your BitBucket OAuth Consumer
 BITBUCKET_OAUTH_CLIENT_SECRET=$CLIENT_SECRET # The Secret your BitBucket OAuth Consumer
-AUTO_CREATE_USER_ON_SUCCESSFUL_LOGIN=true  # default is false 
+AUTO_CREATE_USER_ON_SUCCESSFUL_LOGIN=true  # default is false
 ```
 
 Read more about [Configuring Humio]({{< relref "configuration/_index.md" >}})

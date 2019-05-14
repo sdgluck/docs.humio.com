@@ -2,7 +2,7 @@
 title: Azure AD using SAML
 menuTitle: Azure AD
 category: ["Integration"]
-aliases: ["ref/azure-ad"]
+aliases: ["/ref/azure-ad"]
 ---
 
 ### Login with Azure AD using SAML and prefixes based on roles

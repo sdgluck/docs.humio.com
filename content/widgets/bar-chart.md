@@ -1,6 +1,6 @@
 ---
 title: Bar Chart
-aliases: ["ref/charts/bar-chart"]
+aliases: ["/ref/charts/bar-chart"]
 weight: 700
 ---
 

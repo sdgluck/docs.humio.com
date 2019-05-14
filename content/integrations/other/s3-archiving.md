@@ -2,7 +2,7 @@
 title: "S3 Archiving"
 categories: ["Integration", "OtherIntegration"]
 pageImage: /integrations/aws.svg
-aliases: ["ref/s3"]
+aliases: ["/ref/s3"]
 ---
 
 Humio supports archiving ingested logs to [Amazon S3](https://aws.amazon.com/s3/). The archived logs are then available for further processing in any external system that integrate with S3.

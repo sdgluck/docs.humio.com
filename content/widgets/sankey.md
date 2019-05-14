@@ -1,6 +1,6 @@
 ---
 title: Sankey
-aliases: ["ref/charts/sankey"]
+aliases: ["/ref/charts/sankey"]
 weight: 400
 ---
 

@@ -2,7 +2,7 @@
 title: Duo security
 menuTitle: Duo Security
 category: ["Integration"]
-aliases: ["ref/duo"]
+aliases: ["/ref/duo"]
 ---
 
 [Duo security](https://duo.com) provides a great way of authenticating your users for your on-prem Humio installation.

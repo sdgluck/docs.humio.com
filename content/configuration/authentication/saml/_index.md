@@ -2,7 +2,7 @@
 title: SAML 2.0
 category_title: Overview
 category: ["Integration"]
-aliases: ["ref/saml"]
+aliases: ["/ref/saml"]
 ---
 
 Humio implements the SAML 2.0 _Web Browser SSO Profile_. This means authentication is delegated to an existing identity provider (IDP) which is responsible of managing user credentials. Examples of IDPs are Active Directory Federation Services (AFDS), Azure AD, Google (G Suite) and Auth0.

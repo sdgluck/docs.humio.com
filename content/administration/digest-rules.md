@@ -1,6 +1,6 @@
 ---
 title: Digest Rules
-aliases: [ref/digest-rules]
+aliases: ["smoo", "/ref/digest-rules"]
 related:
   - storage-rule.md
   - ingest-flow.md
@@ -11,7 +11,6 @@ executing real-time queries and compiling incoming events into segment files.
 
 Whenever parsing is completed new events are placed in a Kafka queue called the
 [Digest Queue]({{< ref "ingest-flow.md#parse" >}}).
-
 
 ## Digest Partitions {#partitions}
 
@@ -26,7 +25,6 @@ Humio clusters have a set of rules that associate partitions in the Digest Queue
 with the nodes that are responsible for processing events on that queue. These
 are called _Digest Rules_.
 
-
 ## Configuring Digest Rules
 
 You can see the current Digest Rules for your own cluster by going to the
@@ -38,13 +36,13 @@ When a node is assigned to at least one digest partition, it is considered to be
 
 <!-- TODO: Add information about HA -->
 
-__Example Digest Rules__
+**Example Digest Rules**
 
-| Partition ID | Node         |
-|--------------|--------------|
-| 1            | 1            |
-| 2            | 3            |
-| 3            | 1            |
+| Partition ID | Node |
+| ------------ | ---- |
+| 1            | 1    |
+| 2            | 3    |
+| 3            | 1    |
 
 The table shows three digest rules. Node `1` will receive 2x more work
 than node `3`. This is because `1` is assigned to two partitions while node `3`
@@ -52,7 +50,6 @@ is only handling events on partition `2`.
 
 If a node is not assigned to a partition, it will not take part in the digest
 phase.
-
 
 ## Removing a Digest Node {#removal}
 
@@ -129,8 +126,8 @@ desirable. But raising it reduces the number of small segments
 generated, since segments get flushed after at most that amount of
 time. Reducing to 30 minute interval to say 5 minutes would make the
 fail-over happoen much faster, but at the cost of normal operation, as
-there would be 12 * 24 = 288 segments in each data source per day,
-compared to the 2 * 24 = 48 with the current value. The cost of having
+there would be 12 _ 24 = 288 segments in each data source per day,
+compared to the 2 _ 24 = 48 with the current value. The cost of having
 all these extra segments would slow down normal operation somewhat.
 
 There are a number of configuration parameters to control the

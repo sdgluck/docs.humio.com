@@ -1,7 +1,7 @@
 ---
 title: Creating a Parser
 weight: 200
-aliases: ["ref/creating-a-parser", "parsers/json-parsers", "parsers/regexp-parsers"]
+aliases: ["/ref/creating-a-parser", "parsers/json-parsers", "parsers/regexp-parsers"]
 ---
 
 A parser is a piece of code that transforms incoming data into [events]({{< ref "events.md" >}}).

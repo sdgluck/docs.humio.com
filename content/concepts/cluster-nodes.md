@@ -1,6 +1,6 @@
 ---
 title: Cluster Nodes
-aliases: ["ref/cluster-nodes"]
+aliases: ["/ref/cluster-nodes"]
 ---
 
 Humio can run as distributed system in a cluster.
@@ -16,7 +16,7 @@ account menu.
 
 ## Node Roles
 
-All nodes in the cluster run the same software that can be configured to assume a 
+All nodes in the cluster run the same software that can be configured to assume a
 combination of different logical roles:
 
 - [Arrival Node]({{< ref "#arrival-node" >}})
@@ -24,7 +24,7 @@ combination of different logical roles:
 - [Storage Node]({{< ref "#storage-node" >}})
 
 A node can have any combination of the three roles, and all play a
-part in Humio's data ingest flow.  
+part in Humio's data ingest flow.
 
 Below is a short overview of the node types. For more detailed explanation
 refer to the [data ingest flow documentation page]({{< ref "ingest-flow.md" >}}).
@@ -36,9 +36,9 @@ you to better tune cluster performance.
 
 An _arrival node_ is a node that is responsible for servicing:
 
-* The User Interface (web)
-* HTTP API
-* Parsing Incoming Data
+- The User Interface (web)
+- HTTP API
+- Parsing Incoming Data
 
 The arrival node receives data from external systems and parses it
 into [events]({{< ref "events.md" >}}) and passes the data on to the [digest nodes]({{< ref "#digest-node">}}).
@@ -55,8 +55,8 @@ behind a load-balancer.
 
 A _digest node_ is a node responsible for:
 
-* Constructing segment files for incoming events (the internal storage format in Humio)
-* Executing the Real-Time part of searches.
+- Constructing segment files for incoming events (the internal storage format in Humio)
+- Executing the Real-Time part of searches.
 
 Once a segment file is completed it is passed on to [storage nodes]({{< ref "#storage-node">}}).
 
@@ -67,14 +67,14 @@ Any node that appears in the digest rules is a Digest Node.
 
 A _storage node_ is a node that saves data to disk. They are responsible for:
 
-* Storing Events (Segment files constructed by [digest nodes]({{< ref "#digest-node">}}))
-* Executing the historical part of searches (the most recent results are handled by digest nodes)
+- Storing Events (Segment files constructed by [digest nodes]({{< ref "#digest-node">}}))
+- Executing the historical part of searches (the most recent results are handled by digest nodes)
 
 The the data directory of a storage node is used to store the segment files.
 Segment files make up for the bulk of all data in Humio.
 
 Storage nodes are configured using the cluster's [Storage Rules]({{< ref "storage-rules.md" >}}).
-Any node that appears in the storage rules is considered a Storage Node.  A node that was previusly
+Any node that appears in the storage rules is considered a Storage Node. A node that was previusly
 in a storage rule can still contain segment files that are used for querying.
 
 The Storage Rules are used to configure data [replication]({{< ref "storage-rules.md#replication" >}}).

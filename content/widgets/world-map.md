@@ -1,6 +1,6 @@
 ---
 title: World Map
-aliases: ["ref/charts/world-map"]
+aliases: ["/ref/charts/world-map"]
 weight: 500
 ---
 
