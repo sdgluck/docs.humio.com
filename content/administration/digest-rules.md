@@ -68,7 +68,7 @@ and for storage partitions, then optionally apply those new storage
 rules to all existing segments to allow searching existing data too if
 a node should stop working. If any data is present on only one node,
 then queries will get warnings saying "Segment files missing, partial
-results". Make your http-load-balancer know about more tha one node in
+results". Make your http-load-balancer know about more the one node in
 the cluster, preferably all of them. Make sure you cluster has the CPU
 power required to handle the fail-over: It should be running at well
 below 50% utilization normally.
@@ -108,7 +108,7 @@ so. The cluster typically needs to start 30 minutes back in time on a
 fail-over. While it does so, the event latency of events coming in
 will be higher than normal on the partitions that have been
 temporarily reassigned, starting at up to 1800 - 2000 seconds. The
-cluster thus needs to have sufficient ample CPU ressources to catch up
+cluster thus needs to have sufficient ample CPU resources to catch up
 from such a latency fairly quickly. To aid in that process, queries
 get limited to 50% of their normal CPU time while the digest latency
 is high.
@@ -125,7 +125,7 @@ further, the fail-over will take even longer, which is usually not
 desirable. But raising it reduces the number of small segments
 generated, since segments get flushed after at most that amount of
 time. Reducing to 30 minute interval to say 5 minutes would make the
-fail-over happoen much faster, but at the cost of normal operation, as
+fail-over happen much faster, but at the cost of normal operation, as
 there would be 12 _ 24 = 288 segments in each data source per day,
 compared to the 2 _ 24 = 48 with the current value. The cost of having
 all these extra segments would slow down normal operation somewhat.
